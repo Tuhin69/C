@@ -3,6 +3,7 @@ int main() {
 
   char line[150];
   int vowels, consonant, digit, space;
+  int i;
 
   // initialize all variables to 0
   vowels = consonant = digit = space = 0;
@@ -12,11 +13,9 @@ int main() {
   fgets(line, sizeof(line), stdin);
 
   // loop through each character of the string
-  for (int i = 0; line[i] != '\0'; ++i) {
-
+for (i=0; line[i] != '\0'; ++i) {
     // convert character to lowercase
     line[i] = tolower(line[i]);
-
     // check if the character is a vowel
     if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' ||
         line[i] == 'o' || line[i] == 'u') {
